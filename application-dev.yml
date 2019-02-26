@@ -1,0 +1,51 @@
+server:
+  port: 8680
+eureka:
+  instance:
+    preferIpAddress: true
+    ip-address: 192.168.1.89
+spring:
+  datasource:
+      name: datasource-yorkwell
+      #url: jdbc:sqlserver://183.62.139.231:19876;DatabaseName=DtradeNetGarmentYorkwell
+      url: jdbc:sqlserver://192.168.1.242:1433;DatabaseName=DtradeNetGarmentYorkwell
+      username: '{cipher}47002453a64b9a49840f6aea799fdd03bf39544f4557cd77093d89657064e5bf'
+      password: '{cipher}5f01bfa54d59d3d5a968c35ac0014b0445ae347d36d9edc5b8b0b7a1b79fa5e2'
+      # 使用druid数据源
+      type: com.alibaba.druid.pool.DruidDataSource
+      driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+      filters: stat
+      maxActive: 20
+      initialSize: 1
+      maxWait: 60000
+      minIdle: 1
+      timeBetweenEvictionRunsMillis: 60000
+      minEvictableIdleTimeMillis: 300000
+      validationQuery: select 'x'
+      testWhileIdle: true
+      testOnBorrow: false
+      testOnReturn: false
+      poolPreparedStatements: true
+      maxOpenPreparedStatements: 20
+
+myprofileinfo: this is datatransfer-yorkwell default profile
+
+myconfig:
+  weixin_web_base_url: http://localhost:8080/Weixin
+  weixin_rest_base_url: http://localhost:8081/Rest
+  weixin_import_url_maps:
+    mpoexcessconfirm: /Mpo/Import/MpoExcessConfirm?companycode={companycode}&batchpushid={batchpushid}&uploadall={uploadall}
+    jobmatstatus: /Job/Import/JobMatStatus?companycode={companycode}&batchpushid={batchpushid}&uploadall={uploadall}
+    ordercompleteprocess: /Order/Import/OrderCompleteProcess?companycode={companycode}&batchpushid={batchpushid}&uploadall={uploadall}
+  erp_approve_url_maps:
+    mpoexcessconfirm: 
+    jobmatstatus: 
+  #my weixin account
+  weixin:
+    appid: 
+    appsecret: 
+    upload-filepath: D:/WeixinTemp/Files
+    log-filepath: D:/WeixinTemp/Log
+  weixin_template_maps:
+    mpoexcessconfirm: EwaCZmKWc1aPSUxncwZiMe-iAQ5OhKchr4v7A0gacS4
+    
