@@ -3,16 +3,16 @@ server:
 eureka:
   instance:
     preferIpAddress: true
-    ip-address: 14.18.187.82
+    ip-address: 119.145.136.82
     lease-renewal-interval-in-seconds: 2
     lease-expiration-duration-in-seconds: 10
 spring:
   datasource:
       name: datasource-yorkwell
       #url: jdbc:sqlserver://183.62.139.231:19876;DatabaseName=DtradeNetGarmentYorkwell
-      url: jdbc:sqlserver://192.168.1.242:1433;DatabaseName=DtradeNetGarmentYorkwell
+      url: jdbc:sqlserver://192.168.2.20:1433;DatabaseName=DtradeNetGarment
       username: '{cipher}47002453a64b9a49840f6aea799fdd03bf39544f4557cd77093d89657064e5bf'
-      password: '{cipher}5f01bfa54d59d3d5a968c35ac0014b0445ae347d36d9edc5b8b0b7a1b79fa5e2'
+      password: '{cipher}297281007f378e334a3ba46c59424404cd28481c8b9ce66da184fd67f23a4ddb'
       # 使用druid数据源
       type: com.alibaba.druid.pool.DruidDataSource
       driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
@@ -30,7 +30,7 @@ spring:
       poolPreparedStatements: true
       maxOpenPreparedStatements: 20
 
-myprofileinfo: this is datatransfer-yorkwell default profile
+myprofileinfo: this is datatransfer-yorkwell-live-cn default profile
 
 myconfig:
   weixin_web_base_url: http://dtraderp.com/Weixin
