@@ -3,8 +3,8 @@ server:
 eureka:
   instance:
     preferIpAddress: true
-    ip-address: 119.145.136.82
-    lease-renewal-interval-in-seconds: 2
+    ip-address: 120.197.216.203
+    lease-renewal-interval-in-seconds: 3
     lease-expiration-duration-in-seconds: 10
 spring:
   datasource:
